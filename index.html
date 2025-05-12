@@ -9,13 +9,13 @@
     @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap');
 
     :root {
-      --primary-bg: #1A1A1A; /* Dark background */
-      --secondary-bg: #2C2C2C; /* Slightly lighter for cards/sections */
-      --text-primary: #F5F5F5; /* Light text for readability */
-      --text-secondary: #A0A0A0; /* Subtler text */
-      --accent-color: #00AFFF; /* Professional blue accent */
-      --accent-hover: #007BFF; /* Darker blue for hover */
-      --border-color: #444444; /* Subtle borders */
+      --primary-bg: #1A1A1A;
+      --secondary-bg: #2C2C2C;
+      --text-primary: #F5F5F5;
+      --text-secondary: #A0A0A0;
+      --accent-color: #00AFFF;
+      --accent-hover: #007BFF;
+      --border-color: #444444;
       --card-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
       --font-heading: 'Poppins', sans-serif;
       --font-body: 'Open Sans', sans-serif;
@@ -74,14 +74,14 @@
       padding-bottom: 5px;
       border-bottom: 2px solid transparent;
     }
-    nav a:hover, nav a.active { /* Active class can be added by JS if needed for current section */
+    nav a:hover, nav a.active {
       color: var(--accent-color);
       border-bottom-color: var(--accent-color);
     }
 
     section {
       padding: 60px 20px;
-      min-height: auto; /* Sections will take height based on content */
+      min-height: auto;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -89,11 +89,10 @@
       text-align: center;
       margin-bottom: 40px;
       position: relative;
-      opacity: 0; /* For fade-in animation */
-      transform: translateY(20px); /* For fade-in animation */
+      opacity: 0;
+      transform: translateY(20px);
       animation: sectionFadeIn 0.8s ease-out forwards;
     }
-    /* Staggered animation for sections */
     section:nth-of-type(1) { animation-delay: 0.2s; }
     section:nth-of-type(2) { animation-delay: 0.4s; }
     section:nth-of-type(3) { animation-delay: 0.6s; }
@@ -116,19 +115,15 @@
     .section-anchor {
       display: block;
       position: absolute;
-      top: -100px; /* Increased offset due to larger header/font */
+      top: -100px;
       left: 0;
       width: 1px; height: 1px;
       visibility: hidden;
     }
 
-    /* Section specific backgrounds (can be all var(--primary-bg) or slightly varied) */
     .about, .skills, .bots, .tools, .channels-section, .projects, .github-section, .contact {
-       background: transparent; /* Let body background show, or use var(--secondary-bg) for contrast */
+       background: transparent;
     }
-    /* Example: Alternate section backgrounds if desired */
-    /* section:nth-child(even) { background: var(--secondary-bg); } */
-
 
     h2 {
       font-family: var(--font-heading);
@@ -140,8 +135,8 @@
       display: inline-block;
       padding-bottom: 10px;
     }
-    h2 a.btn-hacker { /* If title itself is a button (like WHO I AM) */
-        font-size: 2.2rem; /* Match h2 */
+    h2 a.btn-hacker {
+        font-size: 2.2rem;
         padding: 10px 20px;
         margin-bottom: 30px;
         border: 2px solid var(--accent-color);
@@ -155,12 +150,11 @@
         color: var(--primary-bg);
      }
 
-
     .card {
       background: var(--secondary-bg);
       padding: 25px; margin: 15px 0;
       border: 1px solid var(--border-color);
-      border-radius: 12px; /* Softer radius */
+      border-radius: 12px;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
       width: 90%; max-width: 600px;
       text-align: left;
@@ -168,7 +162,7 @@
     }
     .card:hover {
       transform: translateY(-8px);
-      box-shadow: 0 8px 25px rgba(0, 175, 255, 0.2); /* Accent color shadow on hover */
+      box-shadow: 0 8px 25px rgba(0, 175, 255, 0.2);
     }
     .card h3 {
         font-family: var(--font-heading);
@@ -185,17 +179,17 @@
         color: var(--text-secondary);
         word-wrap: break-word;
     }
-    .card .btn-hacker { /* Button inside card */
+    .card .btn-hacker {
         display: block;
         width: fit-content;
-        margin: 15px auto 0 auto; /* Center button, add top margin */
+        margin: 15px auto 0 auto;
         text-align: center;
         padding: 10px 22px;
         font-size: 0.9rem;
         font-weight: 600;
     }
 
-    .btn-hacker, .btn-main-channel, .contact-me-btn { /* Unified button style */
+    .btn-hacker, .btn-main-channel, .contact-me-btn {
       display: inline-block; margin-top: 15px;
       padding: 12px 25px;
       border: 2px solid var(--accent-color);
@@ -211,11 +205,10 @@
     }
     .btn-hacker:hover, .btn-main-channel:hover, .contact-me-btn:hover {
       background-color: var(--accent-color);
-      color: var(--primary-bg); /* Text color changes to background color for contrast */
+      color: var(--primary-bg);
       transform: translateY(-3px);
       box-shadow: 0 4px 10px rgba(0, 175, 255, 0.3);
     }
-    /* Specific styling for the main call to action button if needed */
     .btn-main-channel {
         background-color: var(--accent-color);
         color: var(--primary-bg);
@@ -227,10 +220,9 @@
         color: var(--text-primary);
     }
 
-
     .profile-thumbnail {
-        width: 150px; height: 150px; /* Slightly larger */
-        border-radius: 50%; /* Circular for professional look */
+        width: 150px; height: 150px;
+        border-radius: 50%;
         border: 4px solid var(--accent-color);
         object-fit: cover; margin-bottom: 25px;
         box-shadow: 0 0 25px rgba(0, 175, 255, 0.3);
@@ -254,37 +246,34 @@
 
     footer {
       text-align: center; padding: 30px 20px;
-      background: #0D0D0D; /* Even darker for footer */
+      background: #0D0D0D;
       border-top: 1px solid var(--border-color);
       margin-top: 40px;
       color: var(--text-secondary);
     }
     footer p { font-size: 0.9rem; }
 
-    /* Remove Matrix Rain canvas and its styles */
-
-    .animated-description { /* Kept for about me text */
-      line-height: 1.8; font-size: 1.05rem; /* Slightly larger */
-      text-align: center; max-width: 700px; /* Wider for bio */
-      margin: 0 auto 25px auto; /* Center and add bottom margin */
+    .animated-description {
+      line-height: 1.8; font-size: 1.05rem;
+      text-align: center; max-width: 700px;
+      margin: 0 auto 25px auto;
       color: var(--text-secondary);
-      /* animation: fadeInDescription 1.5s ease-out forwards; */ /* Already handled by sectionFadeIn */
-      /* opacity: 0; */
     }
-    /* Removed previous text animations: name-style, glitch-effect, talent-highlight */
-    /* New subtle emphasis */
-    .animated-description .name-style,
-    .animated-description .talent-highlight {
+    .animated-description .name-style {
       color: var(--text-primary);
       font-weight: 600;
     }
-    .animated-description .glitch-effect { /* Re-style if kept, or remove */
+    .animated-description .glitch-effect {
         color: var(--accent-color);
         font-style: italic;
+        font-weight: 600;
+    }
+    .animated-description .talent-highlight {
+      color: var(--accent-color);
+      font-weight: 700;
     }
 
-
-    .text-link-style { /* For links within text */
+    .text-link-style {
         color: var(--accent-color); text-decoration: none;
         font-weight: 600;
         border-bottom: 1px dotted var(--accent-color);
@@ -294,40 +283,31 @@
         color: var(--accent-hover);
         border-bottom-color: var(--accent-hover);
     }
-    .contact-me-btn { /* Button in About Me, now uses general button style */
+    .contact-me-btn {
         margin-left: 5px;
-        margin-top: 10px; /* Give some space */
+        margin-top: 10px;
     }
-
-    /* Removed .animate-text-3d-drop and its keyframes */
-    /* Add subtle hover to animated names if desired */
-    .animate-text-3d-drop { /* Re-purposed for general text animation, if any */
-        display: inline-block;
-        /* transition: transform 0.3s ease; */
-    }
-    /* .animate-text-3d-drop:hover { transform: scale(1.05); } */
-
 
     #preloader {
       position: fixed; top: 0; left: 0;
       width: 100%; height: 100%;
       background: var(--primary-bg); z-index: 9999;
       display: flex; justify-content: center; align-items: center;
-      opacity: 1; transition: opacity 0.7s ease-out 0.3s; /* Added delay to fade-out */
+      opacity: 1; transition: opacity 0.7s ease-out 0.3s;
     }
     #preloader.hidden { opacity: 0; pointer-events: none; }
     .preloader-container { text-align: left; width: 80%; max-width: 500px; }
     .preloader-line {
-      font-family: var(--font-body); /* Changed to body font */
-      color: var(--accent-color); /* Use accent color */
+      font-family: var(--font-body);
+      color: var(--accent-color);
       font-size: 1.1em; margin-bottom: 10px; min-height: 1.3em;
       white-space: nowrap; overflow: hidden;
       border-right: .15em solid var(--accent-color);
-      animation: typing 1.8s steps(35, end), blink-caret .75s step-end infinite; /* Faster typing */
+      animation: typing 1.8s steps(35, end), blink-caret .75s step-end infinite;
       animation-fill-mode: forwards;
       opacity: 0;
     }
-    #preloader-text-line1 { animation-delay: 0.2s, 0.2s; opacity: 1;} /* Slight initial delay */
+    #preloader-text-line1 { animation-delay: 0.2s, 0.2s; opacity: 1;}
     #preloader-text-line2 { animation-name: typing, blink-caret; animation-delay: 2s, 2s; }
     #preloader-text-line3 { animation-name: typing, blink-caret; animation-delay: 3.8s, 3.8s; }
     #preloader-text-line4 { animation-name: typing-final, blink-caret-final; animation-delay: 5.6s, 5.6s; }
@@ -345,9 +325,8 @@
       from, to { border-color: transparent } 50% { border-color: transparent; }
     }
 
-    /* Responsive Media Queries */
     @media (max-width: 768px) {
-        .section-anchor { top: -80px; } /* Adjust based on actual header height */
+        .section-anchor { top: -80px; }
         header h1 a { font-size: 1.7rem; }
         nav a { font-size: 0.9rem; margin: 5px 8px; }
         h2, h2 a.btn-hacker { font-size: 1.8rem; }
@@ -358,7 +337,7 @@
         .preloader-line { font-size: 1em; }
     }
     @media (max-width: 480px) {
-        .section-anchor { top: -70px; } /* Adjust based on actual header height */
+        .section-anchor { top: -70px; }
         body { font-size: 15px; }
         header { padding: 10px 5px; }
         header h1 a { font-size: 1.5rem; margin-bottom: 10px; }
@@ -409,11 +388,11 @@
       <h2> <a href="https://t.me/Our_network108" target="_blank" class="btn-hacker">𝐖𝐇𝐎 𝐈 𝐀𝐌❓</a></h2>
       <img src="https://i.postimg.cc/SxHpY8nC/file-00000000d7fc623-imresizer-1.jpg" alt="Profile Thumbnail" class="profile-thumbnail">
       <p class="animated-description">
-        ℍ𝕖𝕝𝕝𝕠👋 𝙸 𝚍𝚘𝚗'𝚝 𝚔𝚗𝚘𝚠 𝚠𝚑𝚎𝚛𝚎 𝚝𝚘 𝚜𝚝𝚊𝚛𝚝<br>
+        ℍ𝕖𝕝𝕝𝕠👋 𝙸 𝚍𝚘𝚗'𝚝 𝚔𝚗𝚘𝚠 𝚠𝚑𝚎𝚛𝚎 𝚝𝚘 𝚜𝚝𝚊𝚛𝚝 <br>
         ★𝙉𝙖𝙢𝙚:- <span class="name-style">prithawi 𝒓𝒂𝒋𓃭</span> <br>
         𝘼𝙜𝙚:- <span class="glitch-effect">ѕуѕтєм ERROR⚠️</span> <br>
         ➤ 𝙏-𝙂 𝙪𝙨𝙚𝙧𝙣𝙖𝙢𝙚:- <a href="https://t.me/Hindu_papa" target="_blank" class="text-link-style">@Hindu_papa✓</a> <br>
-        ★𝙏𝙖𝙡𝙡𝙚𝙣𝙩★ <span class="talent-highlight">☠️ CODING † HACKING † 𝗧𝗲𝗿𝗺𝘂𝘅 ☠️</span> <br>
+        ★𝙏𝙖𝙡𝙡𝙚𝙣𝙩★: <span class="talent-highlight">☠️ CODING † HACKING † 𝗧𝗲𝗿𝗺𝘂𝘅 ☠️</span> <br>
         ◉python 𝒔𝒄𝒓𝒊𝒑𝒕𝒊𝒏𝒈 ◉𝑪𝒐𝒅-𝒅𝒆𝒔𝒊𝒈𝒏𝒊𝒏𝒈 <br>◉𝒘𝒆𝒃-𝑫𝒆𝒗𝒆𝒍𝒐𝒑𝒊𝒏𝒈 ◉𝐓𝐨𝐨𝐥𝐬 𝑚𝑎𝑘𝑖𝒏𝒈 <br>
         <span class="talent-highlight">◉𝑯𝒂𝒄𝒌𝒊𝒏𝒈,𝑫𝒂𝒓𝒌-𝒘𝒆𝒃 𝒌𝒏𝒐𝒘𝒍𝒆𝒅𝒈𝒆</span> <br>
         𝐃𝐨 𝐲𝐨𝐮 𝐰𝐚𝐧𝐭 𝐚𝐧𝐲𝐭𝐡𝐢𝐧𝐠
@@ -558,8 +537,6 @@
   <audio id="clickSound" src="click.mp3" preload="auto"></audio>
 
   <script>
-    // Removed Matrix Rain Animation Script
-
     // Click Sound Effect
     const clickSound = document.getElementById('clickSound');
     const clickableElements = document.querySelectorAll(
@@ -583,7 +560,7 @@
         document.getElementById('preloader-text-line4')
     ];
     const messages = [
-        "INITIALIZING INTERFACE...", // Simplified preloader messages
+        "INITIALIZING INTERFACE...",
         "ESTABLISHING CONNECTION...",
         "LOADING PROFILE DATA...",
         "WELCOME."
@@ -595,8 +572,7 @@
         preloaderLines[2].textContent = messages[2];
         preloaderLines[3].textContent = messages[3];
 
-        // Adjust total preloader time based on new typing speed and number of lines
-        let totalPreloadTime = (preloaderLines.length * 1800) + 500; // 1.8s per line + 0.5s buffer
+        let totalPreloadTime = (preloaderLines.length * 1800) + 500; // Based on 1.8s typing animation per line
 
         setTimeout(() => {
             preloader.classList.add('hidden');
@@ -604,7 +580,7 @@
                 if (preloader.parentNode) {
                     // preloader.parentNode.removeChild(preloader);
                 }
-            }, 700); // Match CSS opacity transition (0.7s)
+            }, 700); // Matches CSS opacity transition
         }, totalPreloadTime);
     } else {
         if(preloader) preloader.classList.add('hidden');
@@ -620,7 +596,7 @@
                     }
                 }, 700);
             }
-        }, 500); // Increased this fallback delay slightly
+        }, 500);
     });
   </script>
 </body>
