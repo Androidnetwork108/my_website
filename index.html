@@ -1,14 +1,26 @@
-# It's Maked by: @Hindu_papa✓
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>( 𝘖̈𝘜𝘙-Neͥ†wͣoͫrk𝟏𝟎𝟖𓃭 )</title>
+  <title>( 𝘖̈𝘜𝘙-Neͥ†wͣoͫrk𝟏𝟎𝟖𓃭 ) - Professional Portfolio</title>
 
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap');
+
+    :root {
+      --primary-bg: #1A1A1A; /* Dark background */
+      --secondary-bg: #2C2C2C; /* Slightly lighter for cards/sections */
+      --text-primary: #F5F5F5; /* Light text for readability */
+      --text-secondary: #A0A0A0; /* Subtler text */
+      --accent-color: #00AFFF; /* Professional blue accent */
+      --accent-hover: #007BFF; /* Darker blue for hover */
+      --border-color: #444444; /* Subtle borders */
+      --card-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      --font-heading: 'Poppins', sans-serif;
+      --font-body: 'Open Sans', sans-serif;
+    }
+
     * {
       margin: 0;
       padding: 0;
@@ -16,35 +28,35 @@
       scroll-behavior: smooth;
     }
     body {
-      font-family: 'Share Tech Mono', monospace;
-      background: black;
-      color: #00ff00;
+      font-family: var(--font-body);
+      background: var(--primary-bg);
+      color: var(--text-primary);
       overflow-x: hidden;
-      line-height: 1.6;
+      line-height: 1.7;
+      font-size: 16px;
     }
     header {
-      padding: 15px 10px;
+      padding: 20px 15px;
       text-align: center;
-      background: rgba(0, 0, 0, 0.88);
+      background: var(--secondary-bg);
       position: sticky;
       top: 0;
       z-index: 1000;
-      border-bottom: 1px solid #00ff00;
+      border-bottom: 1px solid var(--border-color);
+      box-shadow: 0 2px 10px rgba(0,0,0,0.3);
     }
     header h1 a {
-      font-size: 1.8rem;
-      color: #00ff00;
-      margin-bottom: 10px;
+      font-family: var(--font-heading);
+      font-size: 2rem;
+      color: var(--accent-color);
+      margin-bottom: 15px;
       display: inline-block;
-      padding: 8px 15px;
-      border: 1px solid #00ff00;
-      border-radius: 5px;
       text-decoration: none;
-      transition: background 0.3s, color 0.3s;
+      font-weight: 700;
+      transition: color 0.3s ease;
     }
     header h1 a:hover {
-        background: #00ff00;
-        color: black;
+        color: var(--accent-hover);
     }
     nav {
         display: flex;
@@ -53,236 +65,272 @@
         align-items: center;
     }
     nav a {
-      margin: 5px 8px;
-      color: #00ff00;
+      margin: 5px 12px;
+      color: var(--text-primary);
       text-decoration: none;
-      transition: color 0.3s;
-      font-size: 0.9rem;
+      transition: color 0.3s ease, border-bottom-color 0.3s ease;
+      font-size: 0.95rem;
+      font-weight: 600;
+      padding-bottom: 5px;
+      border-bottom: 2px solid transparent;
     }
-    nav a:hover { color: #00ccff; }
+    nav a:hover, nav a.active { /* Active class can be added by JS if needed for current section */
+      color: var(--accent-color);
+      border-bottom-color: var(--accent-color);
+    }
 
     section {
-      padding: 40px 20px;
-      min-height: auto;
+      padding: 60px 20px;
+      min-height: auto; /* Sections will take height based on content */
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
       text-align: center;
-      margin-bottom: 30px;
+      margin-bottom: 40px;
       position: relative;
+      opacity: 0; /* For fade-in animation */
+      transform: translateY(20px); /* For fade-in animation */
+      animation: sectionFadeIn 0.8s ease-out forwards;
     }
+    /* Staggered animation for sections */
+    section:nth-of-type(1) { animation-delay: 0.2s; }
+    section:nth-of-type(2) { animation-delay: 0.4s; }
+    section:nth-of-type(3) { animation-delay: 0.6s; }
+    section:nth-of-type(4) { animation-delay: 0.8s; }
+    section:nth-of-type(5) { animation-delay: 1.0s; }
+    section:nth-of-type(6) { animation-delay: 1.2s; }
+    section:nth-of-type(7) { animation-delay: 1.4s; }
+    section:nth-of-type(8) { animation-delay: 1.6s; }
+
+
+    @keyframes sectionFadeIn {
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
     section:last-of-type { margin-bottom: 0; }
 
     .section-anchor {
       display: block;
       position: absolute;
-      top: -85px; /* Sticky header offset */
+      top: -100px; /* Increased offset due to larger header/font */
       left: 0;
       width: 1px; height: 1px;
       visibility: hidden;
     }
 
-    /* Backgrounds in new order */
-    .about { background: rgba(0, 17, 0, 0.88); }
-    .skills { background: rgba(0, 0, 26, 0.88); }
-    .bots { background: rgba(16, 0, 16, 0.88); }
-    .tools { background: rgba(17, 17, 0, 0.88); }
-    .channels-section { background: rgba(20, 0, 30, 0.88); }
-    .projects { background: rgba(26, 17, 0, 0.88); }
-    .github-section { background: rgba(30, 30, 30, 0.88); }
-    .contact { background: rgba(26, 0, 0, 0.88); }
+    /* Section specific backgrounds (can be all var(--primary-bg) or slightly varied) */
+    .about, .skills, .bots, .tools, .channels-section, .projects, .github-section, .contact {
+       background: transparent; /* Let body background show, or use var(--secondary-bg) for contrast */
+    }
+    /* Example: Alternate section backgrounds if desired */
+    /* section:nth-child(even) { background: var(--secondary-bg); } */
 
 
     h2 {
-      font-size: 1.6rem;
-      margin-bottom: 20px;
-      border-bottom: 2px solid #00ff00;
+      font-family: var(--font-heading);
+      font-size: 2.2rem;
+      font-weight: 700;
+      margin-bottom: 30px;
+      color: var(--accent-color);
+      border-bottom: 3px solid var(--accent-hover);
       display: inline-block;
-      padding-bottom: 5px;
+      padding-bottom: 10px;
     }
-    h2 a.btn-hacker {
-        font-size: 1.6rem;
-        padding: 8px 15px;
-        margin-bottom: 20px;
+    h2 a.btn-hacker { /* If title itself is a button (like WHO I AM) */
+        font-size: 2.2rem; /* Match h2 */
+        padding: 10px 20px;
+        margin-bottom: 30px;
+        border: 2px solid var(--accent-color);
+        color: var(--accent-color);
+        border-radius: 8px;
+        background: transparent;
+        transition: background 0.3s ease, color 0.3s ease;
     }
+     h2 a.btn-hacker:hover {
+        background: var(--accent-color);
+        color: var(--primary-bg);
+     }
+
 
     .card {
-      background: rgba(0, 255, 0, 0.08);
-      padding: 15px; margin: 10px 0;
-      border: 1px solid #00ff00;
-      border-radius: 10px;
-      transition: background 0.3s, transform 0.3s;
-      width: 85%; max-width: 550px;
+      background: var(--secondary-bg);
+      padding: 25px; margin: 15px 0;
+      border: 1px solid var(--border-color);
+      border-radius: 12px; /* Softer radius */
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      width: 90%; max-width: 600px;
       text-align: left;
+      box-shadow: var(--card-shadow);
+    }
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 8px 25px rgba(0, 175, 255, 0.2); /* Accent color shadow on hover */
     }
     .card h3 {
+        font-family: var(--font-heading);
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: var(--text-primary);
         text-align: center;
-        margin-bottom: 10px;
+        margin-bottom: 15px;
         word-wrap: break-word;
     }
     .card p {
-        margin-bottom: 10px;
+        margin-bottom: 15px;
+        line-height: 1.8;
+        color: var(--text-secondary);
         word-wrap: break-word;
     }
-    .card .btn-hacker {
+    .card .btn-hacker { /* Button inside card */
         display: block;
         width: fit-content;
-        margin-left: auto;
-        margin-right: auto;
+        margin: 15px auto 0 auto; /* Center button, add top margin */
         text-align: center;
+        padding: 10px 22px;
+        font-size: 0.9rem;
+        font-weight: 600;
     }
 
-    .card:hover {
-      background: rgba(0, 255, 0, 0.15);
-      transform: translateY(-5px);
+    .btn-hacker, .btn-main-channel, .contact-me-btn { /* Unified button style */
+      display: inline-block; margin-top: 15px;
+      padding: 12px 25px;
+      border: 2px solid var(--accent-color);
+      border-radius: 8px;
+      color: var(--accent-color);
+      background-color: transparent;
+      text-decoration: none;
+      transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+      font-family: var(--font-body);
+      font-weight: 600;
+      font-size: 1rem;
+      cursor: pointer;
     }
-    .btn-hacker {
-      display: inline-block; margin-top: 10px;
-      padding: 8px 15px;
-      border: 1px solid #00ff00; border-radius: 5px;
-      color: #00ff00; text-decoration: none;
-      transition: background 0.3s, color 0.3s;
-      font-size: 0.9rem;
+    .btn-hacker:hover, .btn-main-channel:hover, .contact-me-btn:hover {
+      background-color: var(--accent-color);
+      color: var(--primary-bg); /* Text color changes to background color for contrast */
+      transform: translateY(-3px);
+      box-shadow: 0 4px 10px rgba(0, 175, 255, 0.3);
     }
-    .btn-hacker:hover { background: #00ff00; color: black; }
-
-    .profile-thumbnail {
-        width: 130px; height: 130px;
-        border-radius: 12px; border: 3px solid #00ff00;
-        object-fit: cover; margin-bottom: 20px;
-        box-shadow: 0 0 15px #00ff00;
-    }
+    /* Specific styling for the main call to action button if needed */
     .btn-main-channel {
-        background-color: #00ff00; color: black;
-        font-weight: bold; padding: 10px 20px;
-        border: 2px solid #00ff00; box-shadow: 0 0 10px #00ff00;
+        background-color: var(--accent-color);
+        color: var(--primary-bg);
+        border-color: var(--accent-color);
     }
     .btn-main-channel:hover {
-        background-color: #00ccff; color: black;
-        border-color: #00ccff; box-shadow: 0 0 15px #00ccff;
+        background-color: var(--accent-hover);
+        border-color: var(--accent-hover);
+        color: var(--text-primary);
     }
-    .skills ul { list-style: none; padding: 0; }
+
+
+    .profile-thumbnail {
+        width: 150px; height: 150px; /* Slightly larger */
+        border-radius: 50%; /* Circular for professional look */
+        border: 4px solid var(--accent-color);
+        object-fit: cover; margin-bottom: 25px;
+        box-shadow: 0 0 25px rgba(0, 175, 255, 0.3);
+    }
+
+    .skills ul { list-style: none; padding: 0; width:100%; max-width:500px; margin: 0 auto;}
     .skills ul li {
-        background: rgba(0, 255, 0, 0.08);
-        margin: 8px 0; padding: 10px;
-        border-left: 3px solid #00ff00;
-        transition: transform 0.2s;
-        text-align: left; width: 100%; max-width: 400px;
+        background: var(--secondary-bg);
+        border: 1px solid var(--border-color);
+        margin: 10px 0; padding: 12px 15px;
+        border-left: 4px solid var(--accent-color);
+        transition: transform 0.3s ease, background-color 0.3s ease;
+        text-align: left; width: 100%;
+        border-radius: 6px;
+        font-size: 0.95rem;
     }
-    .skills ul li:hover { transform: translateX(5px); }
+    .skills ul li:hover {
+        transform: translateX(10px);
+        background-color: rgba(0, 175, 255, 0.1);
+    }
 
     footer {
-      text-align: center; padding: 20px;
-      background: #000; border-top: 1px solid #00ff00;
-      margin-top: 30px;
+      text-align: center; padding: 30px 20px;
+      background: #0D0D0D; /* Even darker for footer */
+      border-top: 1px solid var(--border-color);
+      margin-top: 40px;
+      color: var(--text-secondary);
     }
-    .matrix {
-      position: fixed; top: 0; left: 0;
-      width: 100%; height: 100%;
-      z-index: -1;
+    footer p { font-size: 0.9rem; }
+
+    /* Remove Matrix Rain canvas and its styles */
+
+    .animated-description { /* Kept for about me text */
+      line-height: 1.8; font-size: 1.05rem; /* Slightly larger */
+      text-align: center; max-width: 700px; /* Wider for bio */
+      margin: 0 auto 25px auto; /* Center and add bottom margin */
+      color: var(--text-secondary);
+      /* animation: fadeInDescription 1.5s ease-out forwards; */ /* Already handled by sectionFadeIn */
+      /* opacity: 0; */
     }
-    .animated-description {
-      line-height: 1.8; font-size: 1rem;
-      text-align: center; max-width: 90%;
-      margin-left: auto; margin-right: auto;
-      animation: fadeInDescription 1.5s ease-out forwards;
-      opacity: 0;
-    }
-    @keyframes fadeInDescription {
-      from { opacity: 0; transform: translateY(15px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    .animated-description .name-style {
-      color: #00ccff; font-weight: bold;
-      text-shadow: 0 0 5px #00ccff;
-    }
-    .animated-description .glitch-effect {
-      animation: glitch 3.5s linear infinite alternate;
-      color: #ff00ff; font-weight: bold;
-      display: inline-block;
-    }
-    @keyframes glitch {
-      0%, 100% { text-shadow: none; opacity: 1; transform: skewX(0deg); }
-      30% { text-shadow: 0.5px 0.5px 0 #00ff00, -0.5px -0.5px 0 #ff0000; opacity: 0.95; }
-      60% { text-shadow: -0.5px 0.5px 0 #00ff00, 0.5px -0.5px 0 #ff0000; opacity: 1; }
-      80% { transform: skewX(1deg); }
-    }
+    /* Removed previous text animations: name-style, glitch-effect, talent-highlight */
+    /* New subtle emphasis */
+    .animated-description .name-style,
     .animated-description .talent-highlight {
-      color: #ffff00; font-weight: bold;
-      animation: pulse 2.5s infinite ease-in-out;
-      display: inline-block;
+      color: var(--text-primary);
+      font-weight: 600;
     }
-    @keyframes pulse {
-      0%, 100% { text-shadow: 0 0 2px #ffff00; transform: scale(1); }
-      50% { text-shadow: 0 0 4px #ffff00, 0 0 6px #ffcc00; transform: scale(1.03); }
-    }
-    .text-link-style {
-        color: #00ff99; text-decoration: underline;
-        font-weight: bold;
-    }
-    .text-link-style:hover {
-        color: #00ccff; text-shadow: 0 0 5px #00ccff;
-    }
-    .contact-me-btn {
-        padding: 6px 12px; font-size: 0.85rem;
-        border: 1px solid #ff6600; color: #ff6600;
-        background-color: rgba(255, 102, 0, 0.1);
-        border-radius: 5px; text-decoration: none;
-        transition: background 0.3s, color 0.3s;
-        margin-left: 5px; display: inline-block; margin-top: 5px;
-    }
-    .contact-me-btn:hover {
-        background: #ff6600; color: black;
-        box-shadow: 0 0 8px #ff6600;
+    .animated-description .glitch-effect { /* Re-style if kept, or remove */
+        color: var(--accent-color);
+        font-style: italic;
     }
 
-    .animate-text-3d-drop {
-      display: inline-block;
-      animation: textDrop3D 1.5s ease-out 0.5s forwards;
-      opacity: 0;
-      transform-style: preserve-3d;
+
+    .text-link-style { /* For links within text */
+        color: var(--accent-color); text-decoration: none;
+        font-weight: 600;
+        border-bottom: 1px dotted var(--accent-color);
+        transition: color 0.3s ease, border-bottom-color 0.3s ease;
     }
-    @keyframes textDrop3D {
-      0% {
-        opacity: 0;
-        transform: translateY(-60px) rotateX(90deg) scale(0.7);
-        text-shadow: 0px 0px 1px rgba(0,255,0,0.2), 0px 2px 2px rgba(0,0,0,0.5);
-      }
-      50% {
-        opacity: 0.7;
-        transform: translateY(5px) rotateX(-20deg) scale(1.1);
-        text-shadow: 0px 0px 3px rgba(0,255,0,0.5), 0px 0px 10px rgba(0,255,0,0.3), 2px 5px 5px rgba(0,0,0,0.3);
-      }
-      100% {
-        opacity: 1;
-        transform: translateY(0) rotateX(0deg) scale(1);
-        text-shadow: 0px 0px 5px rgba(0,255,0,0.7), 1px 1px 0px rgba(50,255,50,0.5), -1px -1px 0px rgba(0,100,0,0.5);
-      }
+    .text-link-style:hover {
+        color: var(--accent-hover);
+        border-bottom-color: var(--accent-hover);
     }
+    .contact-me-btn { /* Button in About Me, now uses general button style */
+        margin-left: 5px;
+        margin-top: 10px; /* Give some space */
+    }
+
+    /* Removed .animate-text-3d-drop and its keyframes */
+    /* Add subtle hover to animated names if desired */
+    .animate-text-3d-drop { /* Re-purposed for general text animation, if any */
+        display: inline-block;
+        /* transition: transform 0.3s ease; */
+    }
+    /* .animate-text-3d-drop:hover { transform: scale(1.05); } */
+
 
     #preloader {
       position: fixed; top: 0; left: 0;
       width: 100%; height: 100%;
-      background: #000; z-index: 9999;
+      background: var(--primary-bg); z-index: 9999;
       display: flex; justify-content: center; align-items: center;
-      opacity: 1; transition: opacity 0.5s ease-out;
+      opacity: 1; transition: opacity 0.7s ease-out 0.3s; /* Added delay to fade-out */
     }
     #preloader.hidden { opacity: 0; pointer-events: none; }
     .preloader-container { text-align: left; width: 80%; max-width: 500px; }
     .preloader-line {
-      font-family: 'Share Tech Mono', monospace; color: #00ff00;
-      font-size: 1em; margin-bottom: 10px; min-height: 1.2em;
+      font-family: var(--font-body); /* Changed to body font */
+      color: var(--accent-color); /* Use accent color */
+      font-size: 1.1em; margin-bottom: 10px; min-height: 1.3em;
       white-space: nowrap; overflow: hidden;
-      border-right: .15em solid #00ff00;
-      animation: typing 2s steps(40, end), blink-caret .75s step-end infinite;
+      border-right: .15em solid var(--accent-color);
+      animation: typing 1.8s steps(35, end), blink-caret .75s step-end infinite; /* Faster typing */
       animation-fill-mode: forwards;
       opacity: 0;
     }
-    #preloader-text-line1 { animation-delay: 0s, 0s; opacity: 1;}
+    #preloader-text-line1 { animation-delay: 0.2s, 0.2s; opacity: 1;} /* Slight initial delay */
     #preloader-text-line2 { animation-name: typing, blink-caret; animation-delay: 2s, 2s; }
-    #preloader-text-line3 { animation-name: typing, blink-caret; animation-delay: 4s, 4s; }
-    #preloader-text-line4 { animation-name: typing-final, blink-caret-final; animation-delay: 6s, 6s; }
+    #preloader-text-line3 { animation-name: typing, blink-caret; animation-delay: 3.8s, 3.8s; }
+    #preloader-text-line4 { animation-name: typing-final, blink-caret-final; animation-delay: 5.6s, 5.6s; }
 
     @keyframes typing {
       from { width: 0; opacity: 1; } to { width: 100%; opacity: 1; }
@@ -291,42 +339,40 @@
       from { width: 0; opacity: 1; } to { width: 100%; opacity: 1; border-right-color: transparent; }
     }
     @keyframes blink-caret {
-      from, to { border-color: transparent } 50% { border-color: #00ff00; }
+      from, to { border-color: transparent } 50% { border-color: var(--accent-color); }
     }
     @keyframes blink-caret-final {
       from, to { border-color: transparent } 50% { border-color: transparent; }
     }
 
+    /* Responsive Media Queries */
     @media (max-width: 768px) {
-        .section-anchor { top: -75px; }
-        header h1 a { font-size: 1.5rem; padding: 7px 12px; }
-        nav a { font-size: 0.85rem; margin: 5px; }
-        h2, h2 a.btn-hacker { font-size: 1.4rem; }
-        .profile-thumbnail { width: 110px; height: 110px; border-radius: 10px;}
-        .animated-description { font-size: 0.95rem; line-height: 1.7; }
-        .card { width: 90%; }
-        .skills ul li { max-width: 90%; }
-        .preloader-line { font-size: 0.9em; }
-        .animate-text-3d-drop { animation-duration: 1.2s; }
+        .section-anchor { top: -80px; } /* Adjust based on actual header height */
+        header h1 a { font-size: 1.7rem; }
+        nav a { font-size: 0.9rem; margin: 5px 8px; }
+        h2, h2 a.btn-hacker { font-size: 1.8rem; }
+        .profile-thumbnail { width: 120px; height: 120px;}
+        .animated-description { font-size: 1rem; }
+        .card { width: 90%; padding: 20px; }
+        .skills ul li { max-width: 90%; font-size: 0.9rem; }
+        .preloader-line { font-size: 1em; }
     }
     @media (max-width: 480px) {
-        .section-anchor { top: -65px; }
+        .section-anchor { top: -70px; } /* Adjust based on actual header height */
+        body { font-size: 15px; }
         header { padding: 10px 5px; }
-        header h1 a { font-size: 1.2rem; padding: 6px 10px; margin-bottom: 8px; }
+        header h1 a { font-size: 1.5rem; margin-bottom: 10px; }
         nav { padding: 0 5px; }
-        nav a { font-size: 0.75rem; margin: 3px 4px; }
-        h2, h2 a.btn-hacker { font-size: 1.2rem; margin-bottom: 15px; }
-        .profile-thumbnail { width: 100px; height: 100px; border-radius: 8px; margin-bottom: 15px; }
-        .animated-description { font-size: 0.9rem; line-height: 1.65; max-width: 95%; }
-        .btn-main-channel { font-size: 0.8rem; padding: 8px 15px; }
-        .card { padding: 10px; width: 95%; }
-        .card h3 { font-size: 1.1rem; }
-        .card p { font-size: 0.85rem; }
-        .btn-hacker { font-size: 0.8rem; padding: 6px 12px; }
-        .contact-me-btn { font-size: 0.8rem; padding: 5px 10px;}
-        .skills ul li { max-width: 100%; }
-        .preloader-line { font-size: 0.8em; }
-        .animate-text-3d-drop { animation-duration: 1s; }
+        nav a { font-size: 0.8rem; margin: 5px; }
+        h2, h2 a.btn-hacker { font-size: 1.5rem; margin-bottom: 20px; }
+        .profile-thumbnail { width: 100px; height: 100px; margin-bottom: 20px; }
+        .animated-description { font-size: 0.95rem; }
+        .btn-hacker, .btn-main-channel, .contact-me-btn { font-size: 0.9rem; padding: 10px 18px; }
+        .card { padding: 15px; width: 95%; }
+        .card h3 { font-size: 1.2rem; }
+        .card p { font-size: 0.9rem; }
+        .skills ul li { max-width: 100%; font-size: 0.85rem; }
+        .preloader-line { font-size: 0.9em; }
     }
   </style>
 </head>
@@ -341,11 +387,9 @@
     </div>
   </div>
 
-  <canvas class="matrix"></canvas>
-
   <header>
     <h1>
-      <a href="https://t.me/Our_network108/14" target="_blank" class="animate-text-3d-drop">OUR-Neͥ†wͣoͫrk𝟏𝟎𝟖𓃭</a>
+      <a href="https://t.me/Our_network108/14" target="_blank">OUR-Neͥ†wͣoͫrk𝟏𝟎𝟖𓃭</a>
     </h1>
     <nav>
       <a href="#about">➤𝘈𝘣𝘰𝘶𝘵</a>
@@ -365,7 +409,7 @@
       <h2> <a href="https://t.me/Our_network108" target="_blank" class="btn-hacker">𝐖𝐇𝐎 𝐈 𝐀𝐌❓</a></h2>
       <img src="https://i.postimg.cc/SxHpY8nC/file-00000000d7fc623-imresizer-1.jpg" alt="Profile Thumbnail" class="profile-thumbnail">
       <p class="animated-description">
-        ℍ𝕖𝕝𝕝𝕠👋 𝙸 𝚍𝚘𝚗'𝚝 𝚔𝚗𝚘𝚠 𝚠𝚑𝚎𝚛𝚎 𝚝𝚘 𝚜𝚝𝚊𝚛𝚝 <br>
+        ℍ𝕖𝕝𝕝𝕠👋 𝙸 𝚍𝚘𝚗'𝚝 𝚔𝚗𝚘𝚠 𝚠𝚑𝚎𝚛𝚎 𝚝𝚘 𝚜𝚝𝚊𝚛𝚝<br>
         ★𝙉𝙖𝙢𝙚:- <span class="name-style">prithawi 𝒓𝒂𝒋𓃭</span> <br>
         𝘼𝙜𝙚:- <span class="glitch-effect">ѕуѕтєм ERROR⚠️</span> <br>
         ➤ 𝙏-𝙂 𝙪𝙨𝙚𝙧𝙣𝙖𝙢𝙚:- <a href="https://t.me/Hindu_papa" target="_blank" class="text-link-style">@Hindu_papa✓</a> <br>
@@ -375,13 +419,15 @@
         𝐃𝐨 𝐲𝐨𝐮 𝐰𝐚𝐧𝐭 𝐚𝐧𝐲𝐭𝐡𝐢𝐧𝐠
         <a href="https://t.me/Hindu_papa" target="_blank" class="contact-me-btn">💞 𝐂𝐨𝐧𝐭𝐚𝐜𝐭📞 𝐌𝐄 💞</a>
       </p>
-      <a href="https://t.me/+YWHhXc9PyIMwYWY1" target="_blank" class="btn-hacker btn-main-channel animate-text-3d-drop" style="margin-top: 25px;">❤️‍🔥Ä𝚗𝙙𝚛𐍈ἶ𝙙 Neͥ†wͣoͫrk𝟏𝟎𝟖𓃭❤️‍🔥</a>
+      <a href="https://t.me/+YWHhXc9PyIMwYWY1" target="_blank" class="btn-main-channel" style="margin-top: 25px;">❤️‍🔥Ä𝚗𝙙𝚛𐍈ἶ𝙙 Neͥ†wͣoͫrk𝟏𝟎𝟖𓃭❤️‍🔥</a>
     </div>
   </section>
 
-  <section class="skills"> <div id="skills" class="section-anchor"></div>
+  <section class="skills">
+    <div id="skills" class="section-anchor"></div>
     <div>
-        <h2>➤𝘚𝘬𝘪𝘭𝘭𝘴 𝘭𝘪𝘴𝘵</h2> <ul>
+        <h2>➤𝘚𝘬𝘪𝘭𝘭𝘴 𝘭𝘪𝘴𝘵</h2>
+        <ul>
           <li>Python (Pyrogram, Telethon)</li>
           <li>Linux & Termux Mastery</li>
           <li>HTML/CSS/JS</li>
@@ -393,7 +439,8 @@
     </div>
   </section>
 
-  <section class="bots"> <div id="bots" class="section-anchor"></div>
+  <section class="bots">
+    <div id="bots" class="section-anchor"></div>
     <div>
         <h2>➤𝘉𝘰𝘵𝘴 𝘭𝘪𝘴𝘵</h2>
         <div class="card">
@@ -409,7 +456,8 @@
     </div>
   </section>
 
-  <section class="tools"> <div id="tools" class="section-anchor"></div>
+  <section class="tools">
+    <div id="tools" class="section-anchor"></div>
     <div>
         <h2>➤𝘛𝘦𝘳𝘮𝘶𝘹 𝘛𝘰𝘰𝘭𝘴 𝘭𝘪𝘴𝘵</h2>
         <div class="card">
@@ -425,7 +473,8 @@
     </div>
   </section>
 
-  <section class="channels-section"> <div id="channels" class="section-anchor"></div>
+  <section class="channels-section">
+    <div id="channels" class="section-anchor"></div>
     <div>
         <h2>➤𝘊𝘩𝘢𝘯𝘯𝘦𝘭𝘴 𝘭𝘪𝘴𝘵</h2>
         <div class="card">
@@ -450,9 +499,11 @@
     </div>
   </section>
 
-  <section class="projects"> <div id="projects" class="section-anchor"></div>
+  <section class="projects">
+    <div id="projects" class="section-anchor"></div>
     <div>
-        <h2>➤𝘗𝘳𝘰𝘫𝘦𝘤𝘵𝘴 𝘭𝘪𝘴𝘵</h2> <div class="card">
+        <h2>➤𝘗𝘳𝘰𝘫𝘦𝘤𝘵𝘴 𝘭𝘪𝘴𝘵</h2>
+        <div class="card">
           <h3>⛧‌ٖٖٖٖٖٖٜٖٖٖٖٖٖٜٖ🪬𝐓𝐄𝐑𝐀=𝐕𝐈𝐃𝐄𝐎🪬⛧‌ٖٖٖٖٖٖٜٖٖٖٖٖٖٜٖ</h3>
           <p>This bot download all types link to video+Audio<br>‡ EX:- YT, FB, INSTA, Snapchat, Terabox</p>
           <a href="#" class="btn-hacker" style="background-color: rgba(0,80,0,0.3); color: #aaa; cursor: not-allowed;" onclick="return false;">Link (Soon)</a>
@@ -475,7 +526,8 @@
     </div>
   </section>
 
-  <section class="github-section"> <div id="github" class="section-anchor"></div>
+  <section class="github-section">
+    <div id="github" class="section-anchor"></div>
     <div>
         <h2>➤𝘎𝘪𝘵-𝘩𝘶𝘣</h2>
         <div class="card">
@@ -489,7 +541,8 @@
     </div>
   </section>
 
-  <section class="contact"> <div id="contact" class="section-anchor"></div>
+  <section class="contact">
+    <div id="contact" class="section-anchor"></div>
     <div>
         <h2>➤𝘊𝘰𝘯𝘵𝘢𝘤𝘵𝘴</h2>
         <p>★𝔽𝕠𝕣 ℂ𝕠𝕝𝕝𝕒𝕓𝕠𝕣𝕒𝕥𝕚𝕠𝕟 𝕠𝕣 ℂ𝕦𝕤𝕥𝕠𝕞 ℕ𝕖𝕖𝕕★</p>
@@ -505,36 +558,7 @@
   <audio id="clickSound" src="click.mp3" preload="auto"></audio>
 
   <script>
-    // Matrix Rain Animation
-    const canvas = document.querySelector(".matrix");
-    const ctx = canvas.getContext("2d");
-    let W, H, columns, drops;
-    const fontSize = 16;
-    let matrixSpeed = 40;
-
-    function initializeMatrix() {
-        W = window.innerWidth; H = window.innerHeight;
-        canvas.width = W; canvas.height = H;
-        columns = Math.floor(W / fontSize);
-        drops = [];
-        for (let i = 0; i < columns; i++) { drops[i] = 1 + Math.random() * H / fontSize; }
-    }
-    function drawMatrix() {
-      ctx.fillStyle = "rgba(0, 0, 0, 0.04)"; ctx.fillRect(0, 0, W, H);
-      ctx.fillStyle = "#0F0"; ctx.font = fontSize + "px monospace";
-      for(let i = 0; i < drops.length; i++) {
-        const text = String.fromCharCode(0x30A0 + Math.random() * 96);
-        ctx.fillText(text, i * fontSize, drops[i] * fontSize);
-        if(drops[i] * fontSize > H && Math.random() > 0.975) { drops[i] = 0; }
-        drops[i]++;
-      }
-    }
-    initializeMatrix();
-    let matrixInterval = setInterval(drawMatrix, matrixSpeed);
-    window.addEventListener('resize', () => {
-        clearInterval(matrixInterval); initializeMatrix();
-        matrixInterval = setInterval(drawMatrix, matrixSpeed);
-    });
+    // Removed Matrix Rain Animation Script
 
     // Click Sound Effect
     const clickSound = document.getElementById('clickSound');
@@ -559,10 +583,10 @@
         document.getElementById('preloader-text-line4')
     ];
     const messages = [
-        "INITIALIZING SYSTEM INTERFACE...",
-        "CONNECTING TO THE MATRIX...",
-        "LOADING PORTFOLIO_vFinal ...",
-        "ACCESS GRANTED. WELCOME, AGENT."
+        "INITIALIZING INTERFACE...", // Simplified preloader messages
+        "ESTABLISHING CONNECTION...",
+        "LOADING PROFILE DATA...",
+        "WELCOME."
     ];
 
     if (preloader && preloaderLines.every(line => line !== null)) {
@@ -571,14 +595,17 @@
         preloaderLines[2].textContent = messages[2];
         preloaderLines[3].textContent = messages[3];
 
+        // Adjust total preloader time based on new typing speed and number of lines
+        let totalPreloadTime = (preloaderLines.length * 1800) + 500; // 1.8s per line + 0.5s buffer
+
         setTimeout(() => {
             preloader.classList.add('hidden');
             setTimeout(() => {
                 if (preloader.parentNode) {
                     // preloader.parentNode.removeChild(preloader);
                 }
-            }, 500);
-        }, 8000);
+            }, 700); // Match CSS opacity transition (0.7s)
+        }, totalPreloadTime);
     } else {
         if(preloader) preloader.classList.add('hidden');
     }
@@ -591,9 +618,9 @@
                     if (preloader && preloader.parentNode) {
                         // preloader.parentNode.removeChild(preloader);
                     }
-                }, 500);
+                }, 700);
             }
-        }, 200);
+        }, 500); // Increased this fallback delay slightly
     });
   </script>
 </body>
