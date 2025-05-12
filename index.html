@@ -1,0 +1,600 @@
+# It's Maked by: @Hindu_papa✓
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>( 𝘖̈𝘜𝘙-Neͥ†wͣoͫrk𝟏𝟎𝟖𓃭 )</title>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+    body {
+      font-family: 'Share Tech Mono', monospace;
+      background: black;
+      color: #00ff00;
+      overflow-x: hidden;
+      line-height: 1.6;
+    }
+    header {
+      padding: 15px 10px;
+      text-align: center;
+      background: rgba(0, 0, 0, 0.88);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      border-bottom: 1px solid #00ff00;
+    }
+    header h1 a {
+      font-size: 1.8rem;
+      color: #00ff00;
+      margin-bottom: 10px;
+      display: inline-block;
+      padding: 8px 15px;
+      border: 1px solid #00ff00;
+      border-radius: 5px;
+      text-decoration: none;
+      transition: background 0.3s, color 0.3s;
+    }
+    header h1 a:hover {
+        background: #00ff00;
+        color: black;
+    }
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+    nav a {
+      margin: 5px 8px;
+      color: #00ff00;
+      text-decoration: none;
+      transition: color 0.3s;
+      font-size: 0.9rem;
+    }
+    nav a:hover { color: #00ccff; }
+
+    section {
+      padding: 40px 20px;
+      min-height: auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      margin-bottom: 30px;
+      position: relative;
+    }
+    section:last-of-type { margin-bottom: 0; }
+
+    .section-anchor {
+      display: block;
+      position: absolute;
+      top: -85px; /* Sticky header offset */
+      left: 0;
+      width: 1px; height: 1px;
+      visibility: hidden;
+    }
+
+    /* Backgrounds in new order */
+    .about { background: rgba(0, 17, 0, 0.88); }
+    .skills { background: rgba(0, 0, 26, 0.88); }
+    .bots { background: rgba(16, 0, 16, 0.88); }
+    .tools { background: rgba(17, 17, 0, 0.88); }
+    .channels-section { background: rgba(20, 0, 30, 0.88); }
+    .projects { background: rgba(26, 17, 0, 0.88); }
+    .github-section { background: rgba(30, 30, 30, 0.88); }
+    .contact { background: rgba(26, 0, 0, 0.88); }
+
+
+    h2 {
+      font-size: 1.6rem;
+      margin-bottom: 20px;
+      border-bottom: 2px solid #00ff00;
+      display: inline-block;
+      padding-bottom: 5px;
+    }
+    h2 a.btn-hacker {
+        font-size: 1.6rem;
+        padding: 8px 15px;
+        margin-bottom: 20px;
+    }
+
+    .card {
+      background: rgba(0, 255, 0, 0.08);
+      padding: 15px; margin: 10px 0;
+      border: 1px solid #00ff00;
+      border-radius: 10px;
+      transition: background 0.3s, transform 0.3s;
+      width: 85%; max-width: 550px;
+      text-align: left;
+    }
+    .card h3 {
+        text-align: center;
+        margin-bottom: 10px;
+        word-wrap: break-word;
+    }
+    .card p {
+        margin-bottom: 10px;
+        word-wrap: break-word;
+    }
+    .card .btn-hacker {
+        display: block;
+        width: fit-content;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+
+    .card:hover {
+      background: rgba(0, 255, 0, 0.15);
+      transform: translateY(-5px);
+    }
+    .btn-hacker {
+      display: inline-block; margin-top: 10px;
+      padding: 8px 15px;
+      border: 1px solid #00ff00; border-radius: 5px;
+      color: #00ff00; text-decoration: none;
+      transition: background 0.3s, color 0.3s;
+      font-size: 0.9rem;
+    }
+    .btn-hacker:hover { background: #00ff00; color: black; }
+
+    .profile-thumbnail {
+        width: 130px; height: 130px;
+        border-radius: 12px; border: 3px solid #00ff00;
+        object-fit: cover; margin-bottom: 20px;
+        box-shadow: 0 0 15px #00ff00;
+    }
+    .btn-main-channel {
+        background-color: #00ff00; color: black;
+        font-weight: bold; padding: 10px 20px;
+        border: 2px solid #00ff00; box-shadow: 0 0 10px #00ff00;
+    }
+    .btn-main-channel:hover {
+        background-color: #00ccff; color: black;
+        border-color: #00ccff; box-shadow: 0 0 15px #00ccff;
+    }
+    .skills ul { list-style: none; padding: 0; }
+    .skills ul li {
+        background: rgba(0, 255, 0, 0.08);
+        margin: 8px 0; padding: 10px;
+        border-left: 3px solid #00ff00;
+        transition: transform 0.2s;
+        text-align: left; width: 100%; max-width: 400px;
+    }
+    .skills ul li:hover { transform: translateX(5px); }
+
+    footer {
+      text-align: center; padding: 20px;
+      background: #000; border-top: 1px solid #00ff00;
+      margin-top: 30px;
+    }
+    .matrix {
+      position: fixed; top: 0; left: 0;
+      width: 100%; height: 100%;
+      z-index: -1;
+    }
+    .animated-description {
+      line-height: 1.8; font-size: 1rem;
+      text-align: center; max-width: 90%;
+      margin-left: auto; margin-right: auto;
+      animation: fadeInDescription 1.5s ease-out forwards;
+      opacity: 0;
+    }
+    @keyframes fadeInDescription {
+      from { opacity: 0; transform: translateY(15px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .animated-description .name-style {
+      color: #00ccff; font-weight: bold;
+      text-shadow: 0 0 5px #00ccff;
+    }
+    .animated-description .glitch-effect {
+      animation: glitch 3.5s linear infinite alternate;
+      color: #ff00ff; font-weight: bold;
+      display: inline-block;
+    }
+    @keyframes glitch {
+      0%, 100% { text-shadow: none; opacity: 1; transform: skewX(0deg); }
+      30% { text-shadow: 0.5px 0.5px 0 #00ff00, -0.5px -0.5px 0 #ff0000; opacity: 0.95; }
+      60% { text-shadow: -0.5px 0.5px 0 #00ff00, 0.5px -0.5px 0 #ff0000; opacity: 1; }
+      80% { transform: skewX(1deg); }
+    }
+    .animated-description .talent-highlight {
+      color: #ffff00; font-weight: bold;
+      animation: pulse 2.5s infinite ease-in-out;
+      display: inline-block;
+    }
+    @keyframes pulse {
+      0%, 100% { text-shadow: 0 0 2px #ffff00; transform: scale(1); }
+      50% { text-shadow: 0 0 4px #ffff00, 0 0 6px #ffcc00; transform: scale(1.03); }
+    }
+    .text-link-style {
+        color: #00ff99; text-decoration: underline;
+        font-weight: bold;
+    }
+    .text-link-style:hover {
+        color: #00ccff; text-shadow: 0 0 5px #00ccff;
+    }
+    .contact-me-btn {
+        padding: 6px 12px; font-size: 0.85rem;
+        border: 1px solid #ff6600; color: #ff6600;
+        background-color: rgba(255, 102, 0, 0.1);
+        border-radius: 5px; text-decoration: none;
+        transition: background 0.3s, color 0.3s;
+        margin-left: 5px; display: inline-block; margin-top: 5px;
+    }
+    .contact-me-btn:hover {
+        background: #ff6600; color: black;
+        box-shadow: 0 0 8px #ff6600;
+    }
+
+    .animate-text-3d-drop {
+      display: inline-block;
+      animation: textDrop3D 1.5s ease-out 0.5s forwards;
+      opacity: 0;
+      transform-style: preserve-3d;
+    }
+    @keyframes textDrop3D {
+      0% {
+        opacity: 0;
+        transform: translateY(-60px) rotateX(90deg) scale(0.7);
+        text-shadow: 0px 0px 1px rgba(0,255,0,0.2), 0px 2px 2px rgba(0,0,0,0.5);
+      }
+      50% {
+        opacity: 0.7;
+        transform: translateY(5px) rotateX(-20deg) scale(1.1);
+        text-shadow: 0px 0px 3px rgba(0,255,0,0.5), 0px 0px 10px rgba(0,255,0,0.3), 2px 5px 5px rgba(0,0,0,0.3);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0) rotateX(0deg) scale(1);
+        text-shadow: 0px 0px 5px rgba(0,255,0,0.7), 1px 1px 0px rgba(50,255,50,0.5), -1px -1px 0px rgba(0,100,0,0.5);
+      }
+    }
+
+    #preloader {
+      position: fixed; top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: #000; z-index: 9999;
+      display: flex; justify-content: center; align-items: center;
+      opacity: 1; transition: opacity 0.5s ease-out;
+    }
+    #preloader.hidden { opacity: 0; pointer-events: none; }
+    .preloader-container { text-align: left; width: 80%; max-width: 500px; }
+    .preloader-line {
+      font-family: 'Share Tech Mono', monospace; color: #00ff00;
+      font-size: 1em; margin-bottom: 10px; min-height: 1.2em;
+      white-space: nowrap; overflow: hidden;
+      border-right: .15em solid #00ff00;
+      animation: typing 2s steps(40, end), blink-caret .75s step-end infinite;
+      animation-fill-mode: forwards;
+      opacity: 0;
+    }
+    #preloader-text-line1 { animation-delay: 0s, 0s; opacity: 1;}
+    #preloader-text-line2 { animation-name: typing, blink-caret; animation-delay: 2s, 2s; }
+    #preloader-text-line3 { animation-name: typing, blink-caret; animation-delay: 4s, 4s; }
+    #preloader-text-line4 { animation-name: typing-final, blink-caret-final; animation-delay: 6s, 6s; }
+
+    @keyframes typing {
+      from { width: 0; opacity: 1; } to { width: 100%; opacity: 1; }
+    }
+    @keyframes typing-final {
+      from { width: 0; opacity: 1; } to { width: 100%; opacity: 1; border-right-color: transparent; }
+    }
+    @keyframes blink-caret {
+      from, to { border-color: transparent } 50% { border-color: #00ff00; }
+    }
+    @keyframes blink-caret-final {
+      from, to { border-color: transparent } 50% { border-color: transparent; }
+    }
+
+    @media (max-width: 768px) {
+        .section-anchor { top: -75px; }
+        header h1 a { font-size: 1.5rem; padding: 7px 12px; }
+        nav a { font-size: 0.85rem; margin: 5px; }
+        h2, h2 a.btn-hacker { font-size: 1.4rem; }
+        .profile-thumbnail { width: 110px; height: 110px; border-radius: 10px;}
+        .animated-description { font-size: 0.95rem; line-height: 1.7; }
+        .card { width: 90%; }
+        .skills ul li { max-width: 90%; }
+        .preloader-line { font-size: 0.9em; }
+        .animate-text-3d-drop { animation-duration: 1.2s; }
+    }
+    @media (max-width: 480px) {
+        .section-anchor { top: -65px; }
+        header { padding: 10px 5px; }
+        header h1 a { font-size: 1.2rem; padding: 6px 10px; margin-bottom: 8px; }
+        nav { padding: 0 5px; }
+        nav a { font-size: 0.75rem; margin: 3px 4px; }
+        h2, h2 a.btn-hacker { font-size: 1.2rem; margin-bottom: 15px; }
+        .profile-thumbnail { width: 100px; height: 100px; border-radius: 8px; margin-bottom: 15px; }
+        .animated-description { font-size: 0.9rem; line-height: 1.65; max-width: 95%; }
+        .btn-main-channel { font-size: 0.8rem; padding: 8px 15px; }
+        .card { padding: 10px; width: 95%; }
+        .card h3 { font-size: 1.1rem; }
+        .card p { font-size: 0.85rem; }
+        .btn-hacker { font-size: 0.8rem; padding: 6px 12px; }
+        .contact-me-btn { font-size: 0.8rem; padding: 5px 10px;}
+        .skills ul li { max-width: 100%; }
+        .preloader-line { font-size: 0.8em; }
+        .animate-text-3d-drop { animation-duration: 1s; }
+    }
+  </style>
+</head>
+<body>
+
+  <div id="preloader">
+    <div class="preloader-container">
+        <div id="preloader-text-line1" class="preloader-line"></div>
+        <div id="preloader-text-line2" class="preloader-line"></div>
+        <div id="preloader-text-line3" class="preloader-line"></div>
+        <div id="preloader-text-line4" class="preloader-line"></div>
+    </div>
+  </div>
+
+  <canvas class="matrix"></canvas>
+
+  <header>
+    <h1>
+      <a href="https://t.me/Our_network108/14" target="_blank" class="animate-text-3d-drop">OUR-Neͥ†wͣoͫrk𝟏𝟎𝟖𓃭</a>
+    </h1>
+    <nav>
+      <a href="#about">➤𝘈𝘣𝘰𝘶𝘵</a>
+      <a href="#skills">➤𝘚𝘬𝘪𝘭𝘭𝘴</a>
+      <a href="#bots">➤𝘉𝘰𝘵𝘴</a>
+      <a href="#tools">➤𝘛𝘰𝘰𝘭𝘴</a>
+      <a href="#channels">➤𝘊𝘩𝘢𝘯𝘯𝘦𝘭𝘴</a>
+      <a href="#projects">➤𝘗𝘳𝘰𝘫𝘦𝘤𝘵𝘴</a>
+      <a href="#github">➤𝘎𝘪𝘵-𝘩𝘶𝘣</a>
+      <a href="#contact">➤𝘊𝘰𝘯𝘵𝘢𝘤𝘵𝘴</a>
+    </nav>
+  </header>
+
+  <section class="about">
+    <div id="about" class="section-anchor"></div>
+    <div>
+      <h2> <a href="https://t.me/Our_network108" target="_blank" class="btn-hacker">𝐖𝐇𝐎 𝐈 𝐀𝐌❓</a></h2>
+      <img src="https://i.postimg.cc/SxHpY8nC/file-00000000d7fc623-imresizer-1.jpg" alt="Profile Thumbnail" class="profile-thumbnail">
+      <p class="animated-description">
+        ℍ𝕖𝕝𝕝𝕠👋 𝙸 𝚍𝚘𝚗'𝚝 𝚔𝚗𝚘𝚠 𝚠𝚑𝚎𝚛𝚎 𝚝𝚘 𝚜𝚝𝚊𝚛𝚝 <br>
+        ★𝙉𝙖𝙢𝙚:- <span class="name-style">prithawi 𝒓𝒂𝒋𓃭</span> <br>
+        𝘼𝙜𝙚:- <span class="glitch-effect">ѕуѕтєм ERROR⚠️</span> <br>
+        ➤ 𝙏-𝙂 𝙪𝙨𝙚𝙧𝙣𝙖𝙢𝙚:- <a href="https://t.me/Hindu_papa" target="_blank" class="text-link-style">@Hindu_papa✓</a> <br>
+        ★𝙏𝙖𝙡𝙡𝙚𝙣𝙩★ <span class="talent-highlight">☠️ CODING † HACKING † 𝗧𝗲𝗿𝗺𝘂𝘅 ☠️</span> <br>
+        ◉python 𝒔𝒄𝒓𝒊𝒑𝒕𝒊𝒏𝒈 ◉𝑪𝒐𝒅-𝒅𝒆𝒔𝒊𝒈𝒏𝒊𝒏𝒈 <br>◉𝒘𝒆𝒃-𝑫𝒆𝒗𝒆𝒍𝒐𝒑𝒊𝒏𝒈 ◉𝐓𝐨𝐨𝐥𝐬 𝑚𝑎𝑘𝑖𝒏𝒈 <br>
+        <span class="talent-highlight">◉𝑯𝒂𝒄𝒌𝒊𝒏𝒈,𝑫𝒂𝒓𝒌-𝒘𝒆𝒃 𝒌𝒏𝒐𝒘𝒍𝒆𝒅𝒈𝒆</span> <br>
+        𝐃𝐨 𝐲𝐨𝐮 𝐰𝐚𝐧𝐭 𝐚𝐧𝐲𝐭𝐡𝐢𝐧𝐠
+        <a href="https://t.me/Hindu_papa" target="_blank" class="contact-me-btn">💞 𝐂𝐨𝐧𝐭𝐚𝐜𝐭📞 𝐌𝐄 💞</a>
+      </p>
+      <a href="https://t.me/+YWHhXc9PyIMwYWY1" target="_blank" class="btn-hacker btn-main-channel animate-text-3d-drop" style="margin-top: 25px;">❤️‍🔥Ä𝚗𝙙𝚛𐍈ἶ𝙙 Neͥ†wͣoͫrk𝟏𝟎𝟖𓃭❤️‍🔥</a>
+    </div>
+  </section>
+
+  <section class="skills"> <div id="skills" class="section-anchor"></div>
+    <div>
+        <h2>➤𝘚𝘬𝘪𝘭𝘭𝘴 𝘭𝘪𝘴𝘵</h2> <ul>
+          <li>Python (Pyrogram, Telethon)</li>
+          <li>Linux & Termux Mastery</li>
+          <li>HTML/CSS/JS</li>
+          <li>Bot & Scraper Development</li>
+          <li>Automation Scripts</li>
+          <li>Ethical Hacking Concepts</li>
+          <li>App Making</li>
+        </ul>
+    </div>
+  </section>
+
+  <section class="bots"> <div id="bots" class="section-anchor"></div>
+    <div>
+        <h2>➤𝘉𝘰𝘵𝘴 𝘭𝘪𝘴𝘵</h2>
+        <div class="card">
+          <h3>🪬 🖇️𝐋𝐢𝐧𝐤 = 𝐕𝐢𝐝𝐞𝐨🎥 🪬</h3>
+          <p>JUST SEND LINK & GET 🎥+🔊 FULL HD<br>★Maked by:- @Hindu_papa✓</p>
+          <a href="https://t.me/Link_To_Video_108Bot" target="_blank" class="btn-hacker">𝐓𝐑𝐘 𝐍𝐎𝐖</a>
+        </div>
+        <div class="card">
+          <h3>💎𝙏𝙚𝙡𝙚𝙜𝙧𝙖𝙢 𝙥𝙧𝙞𝙢𝙞𝙪𝙢👑</h3>
+          <p>( 💎𝙏𝙚𝙡𝙚𝙜𝙧𝙖𝙢 𝙥𝙧𝙞𝙢𝙞𝙪𝙢👑B̾O̾T̾ ) Get TG primium free ✅⚜️<br>(★ It's Maked by:- @Hindu_papa✓ )</p>
+          <a href="https://t.me/T_G_primium_108Bot" target="_blank" class="btn-hacker">𝐓𝐑𝐘 𝐍𝐎𝐖</a>
+        </div>
+    </div>
+  </section>
+
+  <section class="tools"> <div id="tools" class="section-anchor"></div>
+    <div>
+        <h2>➤𝘛𝘦𝘳𝘮𝘶𝘹 𝘛𝘰𝘰𝘭𝘴 𝘭𝘪𝘴𝘵</h2>
+        <div class="card">
+          <h3>WEB-PAGE_SCANNER</h3>
+          <p>A simple & powerful scanner to fetch webpage content. Allows copying website scripts for modification via Termux/Linux. ☠️<br>{Maked by: @Hindu_papa 🪬}</p>
+          <a href="https://github.com/Androidnetwork108/Web_page-scanner.git" target="_blank" class="btn-hacker">𝐓𝐑𝐘 𝐍𝐎𝐖</a>
+        </div>
+        <div class="card">
+          <h3>Ai-in-termux</h3>
+          <p>💻 Termux x AI = Cyber God Mode ☠️. A 'Baap-Level' AI Assistant for Termux, powered by Mistral-8x7B.<br>Key Features: Rich UI, Auto-Log Deletion, Chat History & OpenRouter API integration. Built with Desi Hacker Swag!<br>{Maked by: @Hindu_papa}</p>
+          <a href="https://github.com/Androidnetwork108/Ai-in-termux-SMALL-VERSION-.git" target="_blank" class="btn-hacker">𝐓𝐑𝐘 𝐍𝐎𝐖</a>
+        </div>
+    </div>
+  </section>
+
+  <section class="channels-section"> <div id="channels" class="section-anchor"></div>
+    <div>
+        <h2>➤𝘊𝘩𝘢𝘯𝘯𝘦𝘭𝘴 𝘭𝘪𝘴𝘵</h2>
+        <div class="card">
+          <h3>Ä𝚗𝙙𝚛𐍈ἶ𝙙 Neͥ†wͣoͫrk𝟏𝟎𝟖𓃭</h3>
+          <p>𓆩 Ä𝚗𝙙𝚛𐍈ἶ𝙙 Neͥ†wͣoͫrk𝟏𝟎𝟖𓃭 𓆪 | Darknet Labs of Android.<br>
+            Featuring:<br>
+            👨‍💻 Best Telegram Bots<br>
+            🛠️ Hardcore Termux Tools<br>
+            📲 Custom Android Settings<br>
+            🧩 Hacking Tips & Tricks<br>
+            ⚡ Everything handmade with demo & proof.<br>
+            ⚠️ Only Real, Self-Made Content.</p>
+          <a href="https://t.me/+YWHhXc9PyIMwYWY1" target="_blank" class="btn-hacker">★𝐉𝐎𝐈𝐍 𝐌𝐄 ★</a>
+        </div>
+        <div class="card">
+          <h3>⛧‌ٖٖٖٖٖٖٜٖٖٖٖٖٖٜٖ𝗢𝗨𝗥 𝗡𝗘𝗧𝗪𝗢𝗥𝗞⛧‌ٖٖٖٖٖٖٜٖٖٖٖٖٖٜٖ</h3>
+          <p>➢ This is the 𝐁𝐀𝐂𝐊𝐔𝐏 𝐂𝐇𝐀𝐍𝐍𝐄𝐋 for Ä𝚗𝙙𝚛𐍈ἶ𝙙 𝐍𝐞ͥ†𝐰ͣ𝐨ͫ𝐫𝐤𝟏𝟎𝟖𓃭<br>
+            ➣ It's also my 𝐁𝐈𝐎 𝐂𝐇𝐀𝐍𝐍𝐄𝐋 ♥<br>
+            ≪ ⚠️ Educational Purpose Only ⚠️ ⪼</p>
+          <a href="https://t.me/Our_network108" target="_blank" class="btn-hacker">★𝐉𝐎𝐈𝐍 𝐌𝐄 ★</a>
+        </div>
+    </div>
+  </section>
+
+  <section class="projects"> <div id="projects" class="section-anchor"></div>
+    <div>
+        <h2>➤𝘗𝘳𝘰𝘫𝘦𝘤𝘵𝘴 𝘭𝘪𝘴𝘵</h2> <div class="card">
+          <h3>⛧‌ٖٖٖٖٖٖٜٖٖٖٖٖٖٜٖ🪬𝐓𝐄𝐑𝐀=𝐕𝐈𝐃𝐄𝐎🪬⛧‌ٖٖٖٖٖٖٜٖٖٖٖٖٖٜٖ</h3>
+          <p>This bot download all types link to video+Audio<br>‡ EX:- YT, FB, INSTA, Snapchat, Terabox</p>
+          <a href="#" class="btn-hacker" style="background-color: rgba(0,80,0,0.3); color: #aaa; cursor: not-allowed;" onclick="return false;">Link (Soon)</a>
+        </div>
+        <div class="card">
+          <h3>CC Scrapper Bot</h3>
+          <p>Advanced credit card scrapper with BIN lookup, styled output, Hindi shayari & more.</p>
+          <a href="#" class="btn-hacker" style="background-color: rgba(0,80,0,0.3); color: #aaa; cursor: not-allowed;" onclick="return false;">Link (Soon)</a>
+        </div>
+        <div class="card">
+          <h3>Termux Tools Suite</h3>
+          <p>A collection of powerful and useful Termux tools for automation and utility.</p>
+          <a href="#" class="btn-hacker" style="background-color: rgba(0,80,0,0.3); color: #aaa; cursor: not-allowed;" onclick="return false;">Explore (Soon)</a>
+        </div>
+        <div class="card">
+          <h3>Custom Android App</h3>
+          <p>A bespoke Android application developed to meet specific user requirements and features.</p>
+          <a href="#" class="btn-hacker" style="background-color: rgba(0,80,0,0.3); color: #aaa; cursor: not-allowed;" onclick="return false;">View App (Soon)</a>
+        </div>
+    </div>
+  </section>
+
+  <section class="github-section"> <div id="github" class="section-anchor"></div>
+    <div>
+        <h2>➤𝘎𝘪𝘵-𝘩𝘶𝘣</h2>
+        <div class="card">
+          <h3>Hindu_papa (Androidnetwork108)</h3>
+          <p>💻 Termux Pro | 🔓 Ethical & Blackhat Hacker ☠️<br>
+            Specializing in Pentesting, Zero-Days, & Automation.<br>
+            <em>"I don’t fork, I forge."</em><br>
+            Handcrafting Telegram Bots, Termux Tools, & Android Mods with real logic, proof, and code. My scripts are so powerful, they'll call you "BAAP"! 🚀⚠️</p>
+          <a href="https://github.com/Androidnetwork108" target="_blank" class="btn-hacker">𝐕𝐈𝐄𝐖 𝐍𝐎𝐖</a>
+        </div>
+    </div>
+  </section>
+
+  <section class="contact"> <div id="contact" class="section-anchor"></div>
+    <div>
+        <h2>➤𝘊𝘰𝘯𝘵𝘢𝘤𝘵𝘴</h2>
+        <p>★𝔽𝕠𝕣 ℂ𝕠𝕝𝕝𝕒𝕓𝕠𝕣𝕒𝕥𝕚𝕠𝕟 𝕠𝕣 ℂ𝕦𝕤𝕥𝕠𝕞 ℕ𝕖𝕖𝕕★</p>
+        <a href="https://t.me/Hindu_papa" target="_blank" class="btn-hacker">𝐃𝐌 𝐌𝐄 <span class="animate-text-3d-drop">@𝐇𝐢𝐧𝐝𝐮_𝐩𝐚𝐩𝐚</span>✓</a>
+        <a href="https://wa.me/48450414539?text=Hello%20it's%20me%20Baby%20%F0%9F%98%8A%E2%9A%9C%EF%B8%8F" target="_blank" class="btn-hacker">𝙈𝙔 𝙒-𝙋✆</a>
+    </div>
+  </section>
+
+  <footer>
+    <p>Maked by @Hindu_papa✓ | All rights reserved.</p>
+  </footer>
+
+  <audio id="clickSound" src="click.mp3" preload="auto"></audio>
+
+  <script>
+    // Matrix Rain Animation
+    const canvas = document.querySelector(".matrix");
+    const ctx = canvas.getContext("2d");
+    let W, H, columns, drops;
+    const fontSize = 16;
+    let matrixSpeed = 40;
+
+    function initializeMatrix() {
+        W = window.innerWidth; H = window.innerHeight;
+        canvas.width = W; canvas.height = H;
+        columns = Math.floor(W / fontSize);
+        drops = [];
+        for (let i = 0; i < columns; i++) { drops[i] = 1 + Math.random() * H / fontSize; }
+    }
+    function drawMatrix() {
+      ctx.fillStyle = "rgba(0, 0, 0, 0.04)"; ctx.fillRect(0, 0, W, H);
+      ctx.fillStyle = "#0F0"; ctx.font = fontSize + "px monospace";
+      for(let i = 0; i < drops.length; i++) {
+        const text = String.fromCharCode(0x30A0 + Math.random() * 96);
+        ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+        if(drops[i] * fontSize > H && Math.random() > 0.975) { drops[i] = 0; }
+        drops[i]++;
+      }
+    }
+    initializeMatrix();
+    let matrixInterval = setInterval(drawMatrix, matrixSpeed);
+    window.addEventListener('resize', () => {
+        clearInterval(matrixInterval); initializeMatrix();
+        matrixInterval = setInterval(drawMatrix, matrixSpeed);
+    });
+
+    // Click Sound Effect
+    const clickSound = document.getElementById('clickSound');
+    const clickableElements = document.querySelectorAll(
+      'header h1 a, nav a, h2 a.btn-hacker, .btn-hacker, .btn-main-channel, .contact-me-btn'
+    );
+    clickableElements.forEach(elem => {
+      elem.addEventListener('click', () => {
+        if (clickSound && clickSound.src && clickSound.src !== window.location.href ) {
+          clickSound.currentTime = 0;
+          clickSound.play().catch(error => { /* console.log("Audio play error: ", error) */ });
+        }
+      });
+    });
+
+    // Preloader Animation
+    const preloader = document.getElementById('preloader');
+    const preloaderLines = [
+        document.getElementById('preloader-text-line1'),
+        document.getElementById('preloader-text-line2'),
+        document.getElementById('preloader-text-line3'),
+        document.getElementById('preloader-text-line4')
+    ];
+    const messages = [
+        "INITIALIZING SYSTEM INTERFACE...",
+        "CONNECTING TO THE MATRIX...",
+        "LOADING PORTFOLIO_vFinal ...",
+        "ACCESS GRANTED. WELCOME, AGENT."
+    ];
+
+    if (preloader && preloaderLines.every(line => line !== null)) {
+        preloaderLines[0].textContent = messages[0];
+        preloaderLines[1].textContent = messages[1];
+        preloaderLines[2].textContent = messages[2];
+        preloaderLines[3].textContent = messages[3];
+
+        setTimeout(() => {
+            preloader.classList.add('hidden');
+            setTimeout(() => {
+                if (preloader.parentNode) {
+                    // preloader.parentNode.removeChild(preloader);
+                }
+            }, 500);
+        }, 8000);
+    } else {
+        if(preloader) preloader.classList.add('hidden');
+    }
+
+    window.addEventListener('load', () => {
+        setTimeout(() => {
+            if (preloader && !preloader.classList.contains('hidden')) {
+                 preloader.classList.add('hidden');
+                 setTimeout(() => {
+                    if (preloader && preloader.parentNode) {
+                        // preloader.parentNode.removeChild(preloader);
+                    }
+                }, 500);
+            }
+        }, 200);
+    });
+  </script>
+</body>
+</html>
